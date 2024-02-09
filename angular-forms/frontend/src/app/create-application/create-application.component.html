@@ -1,0 +1,34 @@
+<div class="forms1">
+  
+    <form #userName="ngForm" (ngSubmit)="submitForm(userName.value)">
+    <h1>Military recruitment form</h1>
+      <div>Name: <input type="text" name="name" id="" ngModel></div>
+      <div>Email: <input type="email" name="email" id="" ngModel></div>
+      <div>Age: <input type="number" name="age" id="" ngModel></div>
+      <div>
+        Selection Center: 
+        <select name="center" id="" ngModel>
+          <option value="Bangalore">Bangalore</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Mumbai">Mumbai</option>
+        </select>
+      </div>
+      <div>
+        I am above 5ft: <input type="checkbox" (change)="displayHeightBar(userName.controls['minHeightFlag'].value)" name="minHeightFlag" id="" ngModel>
+        <div *ngIf="this.heightBar">
+          Height(feet)<input  (change)="displayHeight(userName.controls['height'].value)" type="range" name="height" id="" min="160" max="180" step="2" value="160" ngModel> {{this.height}} cm.
+        </div>
+      </div>
+      <div>
+        Male: <input type="radio" name="gender" id="" value="Male" ngModel>
+        Female: <input type="radio" name="gender" id="" value="female" ngModel>
+      </div>
+      <div>
+        <p style="display: inline-block;">Select Date:</p>
+        <input type="date" name="bookingDate" id="" ngModel>
+      </div>
+      <div>
+        <input type="submit" value="Apply">
+      </div>
+    </form>
+    </div>

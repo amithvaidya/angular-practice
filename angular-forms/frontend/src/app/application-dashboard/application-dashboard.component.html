@@ -1,0 +1,23 @@
+
+<h1>List of applications</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Height</th>
+        <th>Gender</th>
+        <th>Center</th>
+        <th>Date of Exam</th>
+    </tr>
+    <tr *ngFor="let app of this.apps">
+        <td>{{app.id}}</td>
+        <td>{{app.name}}</td>
+        <td>{{app.age}}</td>
+        <td>{{app.height}}</td>
+        <td>{{app.gender}}</td>
+        <td>{{app.center}}</td>
+        <td>{{app.date_of_exam}}</td>
+    </tr>
+</table>
